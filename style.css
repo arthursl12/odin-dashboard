@@ -1,5 +1,6 @@
 :root{
-    --bg-blue: lightblue;
+    --bg-blue: #3b82f6;
+    
     --bg-white: white;
     --bg-gray: lightgray;
     --font-white: white;
@@ -24,17 +25,67 @@ body{
     border: 3px solid green;
 
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: minmax(300px,1fr) 5fr;
     grid-template-rows: 1fr 4fr;
     
 }
 
+
+/* || SIDE PANEL */
 #side-panel{    
     background-color: var(--bg-blue);
+    padding: 20px;
     grid-column: 1 / 1;
     grid-row: 1 / 3;
 
+    color: var(--font-white);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    place-content: start;
+    justify-content: center;
+    gap: 50px
 }
+
+#side-panel p {
+    margin: 0;
+}
+
+#side-panel > div{
+    border: 3px solid green;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+}
+
+/* || || LOGO */
+.logo{
+    align-items: center;    /* Verticaly centered */
+
+    font-size: 24px;
+    font-weight: 650;
+    color: var(--elem-white);
+    grid-template-rows: auto;
+}
+
+#logo-icon{
+    justify-self: end;
+    border: 3px solid red;
+
+    height: 1.5rem;
+}
+
+.logo p {
+    justify-self: start;
+    /* min-width: auto; */
+    white-space: nowrap;    /* Don't break line */
+
+    border: 3px solid red;
+    
+}
+
+
+
 
 #top-panel{
     background-color: var(--bg-white);
