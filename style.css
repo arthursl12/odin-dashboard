@@ -75,7 +75,8 @@ body{
 }
 
 /* || || NAV */
-.nav-items{
+.nav-items,
+.help-items{
     grid-column: 1 / 1;
     display: grid;
     gap: 5px;
@@ -83,11 +84,13 @@ body{
     grid-template-rows: auto;
 }
 
-.nav{
+.nav,
+.help{
     gap: 10px;
 }
 
-.nav-items > p {
+.nav-items > p,
+.help-items > p {
     font-weight: 650;
 }
 
