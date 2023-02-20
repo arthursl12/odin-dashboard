@@ -1,5 +1,6 @@
 :root{
     --bg-blue: #3b82f6;
+    --bg-lightblue: #e0f2fe;
     
     --bg-white: white;
     --bg-gray: lightgray;
@@ -9,7 +10,7 @@
     --font-black: black;
     --elem-black: black;
     --elem-white: white;
-    --elem-yellow: lightyellow;
+    --elem-yellow: #fbbf24;
     font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     background-color: gray;
@@ -140,7 +141,7 @@ body{
 }
 
 .search-box{
-    background-color: var(--bg-gray);
+    background-color: var(--bg-lightblue);
     height: 2rem;
     margin: 10px;
     border-radius: 20px;
@@ -162,6 +163,8 @@ body{
     border: 2px solid black;
     border-radius: 50%;
     height: 2.5rem;
+    aspect-ratio: 1;
+    object-fit: cover;
 }
 
 .profile-name{
@@ -191,14 +194,18 @@ body{
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     column-gap: 20px;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .profile-greeting img{
     height: 5rem;
-    grid-row: 1 / 3;
     border: 2px solid black;
     border-radius: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
+
+    grid-row: 1 / 3;
+    align-self: center;
 }
 
 .profile-greeting p {
@@ -209,6 +216,8 @@ body{
 .greeting-text{
     font-size: 16px;
     font-weight: 550;
+
+    align-self: end;
 }
 
 .username{
@@ -237,7 +246,7 @@ body{
 
 /* || CONTENT */
 #content{
-    background-color: var(--bg-gray);
+    background-color: var(--bg-lightblue);
     grid-column: 2 / 2;
     grid-row: 2 / 2;
 
@@ -246,14 +255,11 @@ body{
     display: grid;
     grid-template-columns: 4fr 1fr;
     grid-template-rows: auto 2fr;
+    column-gap: 20px;
 }
 
 .content-title{
     font-weight: 550;
-}
-
-#projects{
-    grid-row: 1 / 3;
 }
 
 /* || || ANNOUNCEMENTS */
@@ -319,4 +325,56 @@ body{
     grid-row: 1 / 3;
     align-self: center;
     justify-self: center;
+}
+
+/* || || PROJECTS */
+#projects{
+    grid-row: 1 / 3;
+
+    
+}
+
+.card-container{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+    gap: 20px;
+}
+
+.card p{
+    margin: 0;
+    padding: 0;
+}
+
+
+.project-title{
+    font-weight: 600;
+}
+
+.project-descr{
+    font-size: smaller;
+}
+
+
+.card{
+    background-color: var(--bg-white);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 10px solid VAR(--elem-yellow);
+
+    gap: 5px;
+
+    display: grid;
+}
+
+.project-buttons{
+    justify-self: end;
+
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 10px;
+}
+.project-icons{
+    height: 1.5rem;
 }
