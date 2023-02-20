@@ -103,7 +103,6 @@ body{
 
 /* || TOP PANEL */
 #top-panel{
-    border: #3b82f6 solid 2px;
     background-color: var(--bg-white);
     grid-column: 2 / 2;
     grid-row: 1 / 1;
@@ -113,14 +112,20 @@ body{
     grid-template-rows: auto auto;
     
     padding: 10px 50px;
+
+    box-shadow: 1px 1px 2px  black;
+    position: relative;
+    z-index: 10;
 }
 
+/* || || TOP BAR*/
 .topbar{
     display: grid;
     grid-template-columns: minmax(10%,60%) auto;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: auto auto;
     align-items: start;
-    gap: 50px;
+    column-gap: 50px;
+    row-gap: 20px;
 }
 
 .searchbar{
@@ -152,8 +157,8 @@ body{
 }
 
 .profile-picture img{
-    border: 2px solid var(--bg-gray);
-    border-radius: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
     height: 2.5rem;
 }
 
@@ -168,6 +173,63 @@ body{
     align-self: center;
 }
 
+/* || || GREETINGS */
+.greeting{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    align-items: center;
+}
+
+.profile-greeting{
+    justify-self: start;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.profile-greeting img{
+    height: 5rem;
+    grid-row: 1 / 3;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.profile-greeting p {
+    padding: 0;
+    margin: 0;
+}
+
+.greeting-text{
+    font-size: 16px;
+    font-weight: 550;
+}
+
+.username{
+    font-size: 20px;
+    font-weight: 650;
+}
+
+.buttons{
+    justify-self: end;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20%, 1fr));
+    gap: 30px;
+}
+
+.buttons button{
+    background-color: var(--bg-blue);
+    padding: 8px 24px;
+    color: var(--bg-white);
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+}
 
 
 
