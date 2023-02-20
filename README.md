@@ -1,7 +1,7 @@
 # odin-dashboard
 Admin Dashboard project from The Odin Project
 
-**<a href="https://arthursl12.github.io/odin-dashboard" target="_blank">Live Demo (TBD)</a>**
+**<a href="https://arthursl12.github.io/odin-dashboard" target="_blank">Live Demo</a>**
 
 **Goals**: 
 * Practice HTML and CSS in Web Design
