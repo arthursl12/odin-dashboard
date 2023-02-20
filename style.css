@@ -260,6 +260,7 @@ body{
 
 .content-title{
     font-weight: 550;
+    font-size: larger;
 }
 
 /* || || ANNOUNCEMENTS */
@@ -338,6 +339,7 @@ body{
     display: grid;
 
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-auto-rows: 1fr;
 
     gap: 20px;
 }
@@ -350,10 +352,12 @@ body{
 
 .project-title{
     font-weight: 600;
+    align-self: start;
 }
 
 .project-descr{
     font-size: smaller;
+    align-self: start;
 }
 
 
@@ -361,14 +365,18 @@ body{
     background-color: var(--bg-white);
     padding: 20px;
     border-radius: 10px;
-    border-left: 10px solid VAR(--elem-yellow);
+    border-left: 10px solid var(--elem-yellow);
 
     gap: 5px;
 
     display: grid;
+    grid-template-rows: auto 1fr auto;
+    align-items: start;
+    justify-items: start;
 }
 
 .project-buttons{
+    margin-top: 15px;
     justify-self: end;
 
     display: grid;
@@ -377,4 +385,14 @@ body{
 }
 .project-icons{
     height: 1.5rem;
+}
+
+/* || FOOTER */
+.footer{
+    padding: 10px 10px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
 }
