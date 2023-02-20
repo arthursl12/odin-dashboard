@@ -3,6 +3,8 @@
     
     --bg-white: white;
     --bg-gray: lightgray;
+    --bg-shadow: gray;
+
     --font-white: white;
     --font-black: black;
     --elem-black: black;
@@ -113,7 +115,7 @@ body{
     
     padding: 10px 50px;
 
-    box-shadow: 1px 1px 2px  black;
+    box-shadow: 1px 1px 2px  var(--bg-shadow);
     position: relative;
     z-index: 10;
 }
@@ -238,4 +240,83 @@ body{
     background-color: var(--bg-gray);
     grid-column: 2 / 2;
     grid-row: 2 / 2;
+
+    padding: 10px 20px;
+
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: auto 2fr;
+}
+
+.content-title{
+    font-weight: 550;
+}
+
+#projects{
+    grid-row: 1 / 3;
+}
+
+/* || || ANNOUNCEMENTS */
+.announc-container,
+.trending-container{
+    background-color: var(--bg-white);
+    padding: 20px 24px;
+    border-radius: 10px;
+    /* border: black 2px  solid; */
+    box-shadow: 1px 1px 2px  var(--bg-shadow);
+}
+
+.announc-container p,
+.trending-container p {
+    margin: 0;
+    padding: 0;
+}
+
+.announc-container{
+    display: grid;
+    gap: 20px;
+}
+
+.announc-title,
+.trending-username{
+    font-weight: 600;
+}
+
+.announc-descr,
+.trending-motto{
+    font-size: smaller;
+}
+
+.row-line{
+    border: 1px dashed var(--bg-gray);
+}
+
+/* || || TRENDING */
+.trending-container{
+    list-style: none;
+
+    display: grid;
+    gap: 20px;
+}
+
+#trending{
+    align-self: start;
+}
+
+.trending-container > li {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: auto;
+
+    column-gap: 10px;
+}
+
+.trending-profile-picture{
+    height: 3rem;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    grid-row: 1 / 3;
+    align-self: center;
+    justify-self: center;
 }
